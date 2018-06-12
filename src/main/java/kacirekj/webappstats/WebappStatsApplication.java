@@ -12,6 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 @SpringBootApplication
 @Component
@@ -55,7 +58,6 @@ public class WebappStatsApplication implements CommandLineRunner {
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
-
                     }
             }
         });
@@ -83,11 +85,34 @@ public class WebappStatsApplication implements CommandLineRunner {
 
     private void processNewStats(long currentTime) {
         try {
+            List<Keyword> keywords = new ArrayList<>();
+
             for(Keyword k : keywordRepo.findAll()) {
-                KeywordTimeline t = getPagesService.processKeyword(k, currentTime);
-                keywordTimelineRepo.save(t);
-                System.out.println(t);
+                keywords.add(k);
             }
+
+            Random rand = new Random();
+
+            // I will pick random keywords to achieve consistent coverage of measurements due to the
+            // unpredictable behavior of contiuous http GETs from indeed.com
+            while(keywords.size() > 0) {
+                int randomPick = rand.nextInt(keywords.size());
+                Keyword randomKey = keywords.get(randomPick);
+
+                KeywordTimeline t = getPagesService.processKeyword(randomKey, currentTime);
+                keywordTimelineRepo.save(t);
+
+                keywords.remove(randomPick);
+
+                // Wait for a while rather, so indeed.com will not consider us as spammers
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -57,6 +57,33 @@ public class DatabaseLoaderService {
         newKeyw("java jsf",      "https://cz.indeed.com/jobs?q=java+jsf&l=");
         newKeyw("java ee",       "https://cz.indeed.com/jobs?q=java+ee&l=");
         newKeyw("php",           "https://cz.indeed.com/jobs?q=php&l=");
+        newKeyw("windows",           "https://cz.indeed.com/jobs?q=windows&l=");
+        newKeyw("fortran",           "https://cz.indeed.com/jobs?q=fortran&l=");
+        newKeyw("kotlin",           "https://cz.indeed.com/jobs?q=kotlin&l=");
+        newKeyw("java scala",           "https://cz.indeed.com/jobs?q=java+scala&l=");
+        newKeyw("asp.net",           "https://cz.indeed.com/jobs?q=asp.net&l=");
+        newKeyw(".net mvc",           "https://cz.indeed.com/jobs?q=.net+mvc&l=");
+        newKeyw("intellij idea",           "https://cz.indeed.com/jobs?q=intellij+idea&l=");
+        newKeyw("eclipse",           "https://cz.indeed.com/jobs?q=eclipse&l=");
+        newKeyw("netbeans",           "https://cz.indeed.com/jobs?q=netbeans&l=");
+        newKeyw("node.js",           "https://cz.indeed.com/jobs?q=node.js&l=");
+        newKeyw("websphere",           "https://cz.indeed.com/jobs?q=websphere&l=");
+        newKeyw("jrebel",           "https://cz.indeed.com/jobs?q=jrebel&l=");
+        newKeyw("wildfly",           "https://cz.indeed.com/jobs?q=wildfly&l=");
+        newKeyw("weblogic",           "https://cz.indeed.com/jobs?q=weblogic&l=");
+
+        newKeyw("tomcat",           "https://cz.indeed.com/jobs?q=tomcat&l=");
+        newKeyw("python django",           "https://cz.indeed.com/jobs?q=python+django&l=");
+        newKeyw("javascript typescript",           "https://cz.indeed.com/jobs?q=javascript+typescript&l=");
+        newKeyw("javascript dart",           "https://cz.indeed.com/jobs?q=javascript+dart&l=");
+        newKeyw("golang",           "https://cz.indeed.com/jobs?q=golang&l=");
+        newKeyw("haskel",           "https://cz.indeed.com/jobs?q=haskel&l=");
+        newKeyw("google",           "https://cz.indeed.com/jobs?q=google&l=");
+        newKeyw("microsoft",           "https://cz.indeed.com/jobs?q=microsoft&l=");
+        newKeyw("oracle",           "https://cz.indeed.com/jobs?q=oracle&l=");
+        newKeyw("swift",           "https://cz.indeed.com/jobs?q=swift&l=");
+        newKeyw("objectivec",           "https://cz.indeed.com/jobs?q=objectivec&l=");
+        newKeyw(".net core",           "https://cz.indeed.com/jobs?q=.net+core&l=");
 
         // init KeywordsTimeline
         KeywordTimeline initT = new KeywordTimeline(0, 0L, init, 0, "");
