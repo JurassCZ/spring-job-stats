@@ -6,7 +6,10 @@
 	<groupId>kacirekj</groupId>
 	<artifactId>webapp-stats</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<modules>
+		<module>webapp-stats-web</module>
+	</modules>
+	<packaging>pom</packaging>
 
 	<name>webapp-stats</name>
 	<description>Demo project for Spring Boot</description>
